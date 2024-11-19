@@ -1,0 +1,349 @@
+*{
+    box-sizing: border-box;
+}
+html,body{
+    margin:0;
+    font-family: var(--font-family-primary);
+    color: var(--secondary-color)
+
+}
+
+:root{
+    --primary-color: #B9FF66;
+    --secondary-color: #191A23;
+    --grey-color: #F3F3F3;
+    --font-family-primary: "Space Grotesk", sans-serif;
+    height: 100%;
+    width:100%
+}
+
+h1{
+    font-size: 3.75rem;
+    font-family: "Space Grotesk", sans-serif;
+    margin: 0;
+}
+
+h2{
+    font-size: 2.5rem;
+    font-family: "Space Grotesk", sans-serif;
+    margin: 0;
+}
+
+h3{
+    font-size: 1.875rem;
+    font-family: "Space Grotesk", sans-serif;
+    margin: 0;
+}
+
+h4{
+    font-size: 1.25rem;
+    font-family: "Space Grotesk", sans-serif;
+    margin: 0;
+}
+
+p{
+    font-size: 1.125rem;
+    font-family: "Space Grotesk", sans-serif;
+    margin: 0;
+}
+
+.vertical-line{
+    min-height: 200px;
+    width:0.15em;
+    background-color: #ffffff;
+}
+
+.container{
+    width: 100%;
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 0 2em;
+}
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem 0;
+
+}
+
+.hero-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.hero-texts{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 40%;
+}
+
+.black-btn{
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 1.25em 2.188em;
+    font-family: "Space Grotesk", sans-serif;
+    margin: 0;
+    font-size: 1.125rem;
+    border: 0;
+    border-radius: 0.313em;
+    align-self: flex-start;
+}
+
+.hero-image-container{
+    min-width: 50%
+}
+.hero-image{
+    width: 500px;
+}
+
+.logo-carousel{
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.hero-logo{
+    filter: grayscale(1);
+}
+
+.hero-logo:hover{
+    filter: grayscale(0);
+}
+
+.services{
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.service-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.service-heading{
+    display: flex;
+    flex-direction: row;
+    gap:2.5rem;
+    width: 100%;
+    align-items: center;
+}
+
+.service-heading h2{
+    background-color: var(--primary-color);
+    border-radius:6px;
+    padding: 2px 5px;
+    align-self: flex-start;
+}
+
+.service-heading p{
+    width: 50%;
+}
+
+.service-list{
+    display: grid;
+    grid-template-columns: auto auto ;
+    gap: 60px;   
+}
+
+.service-card{
+    background-color: var(--grey-color);
+    padding: 3.125em 3.5em;
+    border: 1px solid var(--secondary-color);
+    border-radius: 2.813em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: 0px 5px 0px #191A23;
+}
+.service-card-text{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:stretch;
+}
+
+.service-card-text h3{
+    display: inline-block;
+    align-self: flex-start;
+    border-radius:6px;
+    padding: 2px 5px;
+}
+
+.service-card-text a{
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 1.25rem;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    align-self: flex-start;
+    border-bottom: 3px solid rgba(185, 255, 102, 0);
+}
+
+.service-card-text:hover a{
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.service-card-text a img{
+    transform: rotateZ(0deg);
+    transition: transform 300ms;
+}
+
+.service-card-text:hover a img{
+    transform: rotateZ(180deg);
+ }
+
+
+ .service-card:nth-child(3n-1){
+    background-color: var(--primary-color); 
+}
+.service-card:nth-child(3n-1) h3{
+    background-color: white; 
+}
+.service-card:nth-child(3n-1) .service-card-text:hover a{
+    border-bottom: 3px solid black;
+}
+
+
+.service-card:nth-child(3n){
+    background-color: var(--secondary-color); 
+}
+.service-card:nth-child(3n) h3{
+    background-color: white; 
+    color: black;
+}
+.service-card:nth-child(3n) .service-card-text:hover a{
+    border-bottom: 3px solid white;
+}
+.service-card:nth-child(3n) .service-card-text a{
+    color:white;
+}
+
+.cta-section{
+    background-color: var(--grey-color);
+    width: 100%;
+    margin: 5rem 0;
+    padding: 3.75rem;
+    border-radius: 45px;
+    position: relative;
+}
+.cta-content{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+}
+.cta-text{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap:1.625em;
+}
+.cta-img{
+    position: absolute;
+    right:0;
+
+}
+
+
+.case-studies-grid{
+    background-color: var(--secondary-color);
+    width: 100%;
+    padding: 3.75rem;
+    border-radius: 45px;
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 0.15rem auto 0.15rem auto ;
+    gap: 3rem;
+    justify-content: space-between;
+    align-items: center;
+}
+ 
+.case-study{
+    color:white;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.case-study a{
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1.25rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.services.faq{
+    margin: 3rem 0;
+}
+
+.faq-list{
+    display: flex;
+    flex-direction: column;
+    gap:1.875em;
+}
+
+.faq-item{
+    background-color: var(--grey-color);
+    padding: 3.125em 3.5em;
+    border: 1px solid var(--secondary-color);
+    border-radius: 2.813em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap:1.875em;
+    box-shadow: 0px 5px 0px #191A23;
+}
+.faq-item-head{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.faq-item-head-text{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.faq-info{
+    padding-top: 1.875em;
+    border-top: 1px solid var(--secondary-color);
+}
+
+.faq-icon-wrapper{
+background: #F3F3F3;
+border: 1px solid #191A23;
+border-radius:100%;
+width: 58px;
+height: 58px;
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+
+}
+
+.faq-icon-close{
+    position: absolute;
+}
+
+.faq-item.open{
+    background-color: var(--primary-color);
+   
+}
