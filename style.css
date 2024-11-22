@@ -410,3 +410,236 @@ align-self: flex-end;
 .service-content.team .black-btn{
 align-self: flex-end;
 }
+
+
+.services.testimonial{
+    margin: 6rem 0;
+    
+}
+.testimonial-wrapper{
+    padding: 5rem 0;
+    background-color: var(--secondary-color);
+    color: white;
+    width: 100%;
+    border-radius: 45px;
+}
+
+.testimonial-card{
+    display: flex;
+    flex-direction: column;
+    gap:1em;
+    position: relative;   
+}
+
+.swiper.testimonial-slider{
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;   
+}
+
+
+.swiper-slide.testimonial-slider{
+    width: 34rem;
+    min-height: 350px;
+    margin-left: 20px;
+    
+}
+
+.testimonial-slide-nav{
+    display: flex;
+    gap: 1rem;
+    color: rgba(12, 12, 12, 0.3);
+
+}
+
+.tslide-prev{
+    transform: rotate(180deg);
+    color: rgba(255, 255, 255, 0.3);
+    cursor: pointer
+}
+.tslide-prev:hover{
+    transform: rotate(180deg);
+    color: white
+}
+
+.tslide-next{
+    color: rgba(255, 255, 255, 0.3);
+    cursor: pointer
+}
+.tslide-next:hover{
+    color: white
+}
+
+.testimonial-card-content {
+    padding: 30px 35px;
+    position: relative;
+    border-radius: 30px;
+    border: 1px solid var(--primary-color);
+  }
+
+
+  
+  .bubble-tip {
+    position: absolute;
+    bottom: 45.5px;
+    left: 10%;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 20px solid var(--primary-color);
+}
+
+.bubble-tip:after {
+    content: '';
+    position: absolute;
+    top: -21px;
+    left: -14px;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-top: 19px solid #1a1a1a;
+}
+.testimonial-person{
+    margin-left: 50px;
+   position: relative;
+   top: 20px;
+   height: 100%;
+}
+
+/* Pagination container */
+.tslide-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Spacing between bullets */
+    
+  }
+  
+  /* Default bullet design (inactive) */
+  .custom-bullet {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    -webkit-mask: url('/img/paggination.svg') no-repeat center;
+    mask: url('/img/paggination.svg') no-repeat center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Active bullet design */
+  .swiper-pagination-bullet-active {
+    background-color: var(--primary-color); /* Bright green for the active bullet */
+  }
+
+
+  .message-option{
+    display: flex;
+    gap:1rem;
+  }
+
+  .radio-border{
+    position: relative;
+    border-radius: 100%;
+    width:28px;
+    height: 28px;
+    border: 1px solid var(--secondary-color);
+    padding: 5px;
+  }
+
+  .radio-circle{
+    position: absolute;
+    width:16px;
+    height: 16px;
+    background-color: var(--primary-color);
+    border-radius: 100%;
+  }
+
+  .contact-wrapper{
+    padding: 6.25rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--grey-color);
+    position: relative;
+    border-radius: 45px;
+
+  }
+
+  .contact-form form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .form-group{
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem;
+    position: relative;
+  }
+
+  .form-group input{
+    width: 400px;
+    padding: 1.125em 1.875em;
+    font-size: 1.125rem;
+    font-family: "Space Grotesk", sans-serif;
+    margin: 0;
+    border-radius: 14px;
+    border: 1px solid var(--secondary-color)
+  }
+
+  .form-group select{
+    appearance: none;
+    width: 400px;
+    padding: 1.125em 1.875em;
+    font-size: 1.125rem;
+    font-family: "Space Grotesk", sans-serif;
+    margin: 0;
+    border-radius: 14px;
+    border: 1px solid var(--secondary-color)
+  }
+
+  .form-group::after{
+    color: black;
+    content: '▾';
+    margin-right: 10px;
+    pointer-events: none;
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    font-size: 20px;
+  }
+  
+  
+  .form-option{
+    display:flex;
+    gap:1rem;
+  }
+  .message-option{
+    display: flex;
+    align-items: center;
+  }
+
+  .contact-wrapper img{
+    align-self: flex-end;
+    position: absolute;
+    right: 0;
+    top: 10%;
+    height: 80%;
+  }
+
+  .radio-wrapper{
+    cursor: pointer;
+  }
+
+  .quote-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
