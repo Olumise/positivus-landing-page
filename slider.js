@@ -18,5 +18,17 @@ const testimonial = new Swiper(".testimonial-slider", {
             return `<span class="${className} custom-bullet"></span>`;
           },
       },
+      breakpoints: {
+      640: {
+        slidesPerView: "auto",
+    spaceBetween: 30,
+      },
+
+      249: {
+        slidesPerView: 1,
+    spaceBetween: 30,
+    centeredSldes:false,
+      }
+    }
     
 })

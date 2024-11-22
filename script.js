@@ -2,7 +2,10 @@ const messageCheckboxCircleEl = document.querySelector("#message-option"),
       messageCheckboxEl = document.querySelector("#message-radio"),
       quoteCheckboxCircleEl = document.querySelector("#quote-option"),
       quoteCheckboxEl = document.querySelector("#quote-radio"),
-      workSelect = document.querySelector("#form-quote")
+      workSelect = document.querySelector("#form-quote"),
+      navIcon = document.querySelector("#mobile-nav-icon"),
+      mobileMenu = document.querySelector(".nav-links-wrapper"),
+      closeIcon = document.querySelector("#mobile-close-nav-icon")
 
 let messageForm  = true
 
@@ -46,3 +49,24 @@ quoteCheckboxEl.addEventListener("click", function(){
   }
   console.log("message:" + messageForm)
   })
+
+
+  navIcon.addEventListener("click", function(){
+     mobileMenu.style.transform = "translateX(0%)"
+
+  })
+
+  closeIcon.addEventListener("click",function(){
+    mobileMenu.style.transform = "translateX(100%)"
+  })
+
+  document.body.addEventListener("click", function (event) {
+    // Check if the click is outside the mobile menu
+    if (
+        mobileMenu.style.transform === "translateX(0%)" && 
+        !mobileMenu.contains(event.target) && // Ensure the click is not inside the menu
+        event.target !== navIcon // Ensure the click is not on the navIcon
+    ) {
+        mobileMenu.style.transform = "translateX(100%)"; // Close menu
+    }
+});
